@@ -610,14 +610,11 @@ namespace DbWork
             // 
             this.searchFilmComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchFilmComboBox.FormattingEnabled = true;
-            this.searchFilmComboBox.Items.AddRange(new object[] {
-            "Название фильма",
-            "Жанр",
-            "Ключ жанра"});
             this.searchFilmComboBox.Location = new System.Drawing.Point(5, 75);
             this.searchFilmComboBox.Name = "searchFilmComboBox";
             this.searchFilmComboBox.Size = new System.Drawing.Size(214, 21);
             this.searchFilmComboBox.TabIndex = 1;
+            this.searchFilmComboBox.DropDown += new System.EventHandler(this.searchFilmComboBox_DropDown);
             this.searchFilmComboBox.SelectedIndexChanged += new System.EventHandler(this.searchFilmComboBox_SelectedIndexChanged);
             // 
             // label1

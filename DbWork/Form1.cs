@@ -42,6 +42,7 @@ namespace DbWork
             adapter = new SqlDataAdapter("SELECT * FROM Genre", sqlConnection);
             adapter.Fill(dataTable1);
             dataGridView1.DataSource = dataTable1;
+            dataGridView1.Columns["Id"].Visible = false;
             dataGridView1.Columns["genreKey"].HeaderText = "Genre ID";
             dataGridView1.Columns["genreName"].HeaderText = "Genre";
             dataGridView1.Columns["popularity"].HeaderText = "Popularity";
@@ -335,6 +336,15 @@ namespace DbWork
             }
             LoadDB();
         }
+        private void searchFilmComboBox_DropDown(object sender, EventArgs e)
+        {
+            if (searchFilmComboBox.Items.Count == 0)
+            {
+                searchFilmComboBox.Items.Add("Название фильма");
+                searchFilmComboBox.Items.Add("Жанр");
+                searchFilmComboBox.Items.Add("Ключ жанра");
+            }
+        }
         private void searchFilmComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (searchFilmComboBox.Text == "Название фильма")
@@ -470,7 +480,7 @@ namespace DbWork
             genreRB.Checked = false;
             popularityRB.Checked = false;
             ratingRB.Checked = false;
-            searchFilmComboBox.Text = "";
+            searchFilmComboBox.Items.Clear();
             textBox1.Text = "";
             comboBox1.Text = "";
             numericUpDown1.Value = 1;
