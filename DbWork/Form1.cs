@@ -67,7 +67,7 @@ namespace DbWork
         {
             filmNameTextBox.Text = "";
             totalDiskUpDown.Value = 0;
-            genreNameComboBox.Items.Clear();
+            genreNameComboBox.Text = "";
             genreNumericUpDown.Value = 1;
 
             filmNameComboBox.Items.Clear();
@@ -520,7 +520,5 @@ namespace DbWork
         {
             Application.Exit();
         }
-
-
     }
 }

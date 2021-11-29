@@ -60,6 +60,7 @@ namespace DbWork
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.genreKeyRB = new System.Windows.Forms.RadioButton();
             this.genreRB = new System.Windows.Forms.RadioButton();
             this.popularityRB = new System.Windows.Forms.RadioButton();
             this.ratingRB = new System.Windows.Forms.RadioButton();
@@ -79,7 +80,6 @@ namespace DbWork
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.genreKeyRB = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.genreNumericUpDown2)).BeginInit();
@@ -472,6 +472,18 @@ namespace DbWork
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Жанры";
             // 
+            // genreKeyRB
+            // 
+            this.genreKeyRB.AutoSize = true;
+            this.genreKeyRB.Location = new System.Drawing.Point(6, 18);
+            this.genreKeyRB.Name = "genreKeyRB";
+            this.genreKeyRB.Size = new System.Drawing.Size(86, 17);
+            this.genreKeyRB.TabIndex = 3;
+            this.genreKeyRB.TabStop = true;
+            this.genreKeyRB.Text = "Ключ жанра";
+            this.genreKeyRB.UseVisualStyleBackColor = true;
+            this.genreKeyRB.CheckedChanged += new System.EventHandler(this.genreKeyRB_CheckedChanged);
+            // 
             // genreRB
             // 
             this.genreRB.AutoSize = true;
@@ -624,7 +636,7 @@ namespace DbWork
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(678, 544);
+            this.tabPage2.Size = new System.Drawing.Size(678, 527);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Фильмы";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -636,7 +648,7 @@ namespace DbWork
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(672, 538);
+            this.dataGridView2.Size = new System.Drawing.Size(672, 521);
             this.dataGridView2.TabIndex = 1;
             // 
             // tabPage1
@@ -681,18 +693,6 @@ namespace DbWork
             this.checkBox1.Text = "При выборе жанра в таблице показывать фильмы только с этим жанром";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // genreKeyRB
-            // 
-            this.genreKeyRB.AutoSize = true;
-            this.genreKeyRB.Location = new System.Drawing.Point(6, 18);
-            this.genreKeyRB.Name = "genreKeyRB";
-            this.genreKeyRB.Size = new System.Drawing.Size(86, 17);
-            this.genreKeyRB.TabIndex = 3;
-            this.genreKeyRB.TabStop = true;
-            this.genreKeyRB.Text = "Ключ жанра";
-            this.genreKeyRB.UseVisualStyleBackColor = true;
-            this.genreKeyRB.CheckedChanged += new System.EventHandler(this.genreKeyRB_CheckedChanged);
             // 
             // Form1
             // 
